@@ -1,0 +1,47 @@
+.nav {
+  width: 100px;
+  height: 100dvh;
+  background-color: var(--3rdback);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid var(--important-text);
+  padding: 24px 25% 10px;
+
+  img {
+    width: 40px;
+    filter: invert(var(--icon-invert));
+  }
+
+  span {
+    font-size: 20px;
+    color: var(--important-text);
+  }
+}
+
+.button:last-of-type {
+  border-bottom: none;
+}
+
+.top, .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  border-bottom: 1px solid var(--important-text);
+}
+
+.bottom {
+  border-top: 1px solid var(--important-text);
+  padding-bottom: 10px;
+}
