@@ -1,8 +1,8 @@
-import styles from "@styles/theme-switch.module.scss";
+import styles from "styles/theme-switch.module.scss";
 
 export default function ThemeSwitch() {
   return <label className={styles.switch}>
-    <input type="checkbox" onChange={(event) => {
+    <input type="checkbox" id="theme-switch-checkbox" onChange={(event) => {
       const target = event.target as HTMLInputElement;
 
       if (target.checked)

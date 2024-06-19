@@ -1,0 +1,21 @@
+.button {
+  width: var(--book-size);
+  height: var(--book-size);
+  background-color: var(--2ndback);
+  position: relative;
+  border-radius: 10%;
+}
+
+.img {
+  width: 50%;
+  position: relative;
+}
+
+.shortcut {
+  font-family: var(--font);
+  position: absolute;
+  opacity: 0.5;
+  bottom: 5px;
+  right: 5px;
+  visibility: var(--shortcut-visibility);
+}

@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --back: #23232D;
+  --1stback: #23232D;
   --2ndback: #404050;
   --3rdback: #323241;
   --text: #D0D0FF;
   --important-text: #FFF;
   --icon-invert: 0;
   --font: "Varela Round", sans-serif;
+  --2ndfont: "Noto Sans";
+  --shortcut-visibility: visible;
+  --book-size: 120px;
 }
 
 :root[data-theme=light] {
-  --back: #FFF;
+  --1stback: #FFF;
   --2ndback: #DFDFDF;
   --3rdback: #EFEFEF;
   --text: #333;
@@ -20,7 +24,7 @@
 }
 
 * {
-  transition: background-color 0.5s, color 0.5s, border-color 0.5s, filter 0.5s;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s, filter 0.5s, box-shadow 0.5s;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -28,17 +32,24 @@
   background-color: transparent;
   border: none;
   font-family: var(--font);
+  font-size: 1rem;
+  user-select: none;
 }
 
 a {
   text-decoration: none;
 }
 
-button {
+button,
+input[type=submit] {
   cursor: pointer;
 }
 
 body {
   margin: 0;
-  background-color: var(--back);
+  background-color: var(--1stback);
+}
+
+#main {
+  width: calc(100dvw - 100px);
 }

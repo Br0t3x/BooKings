@@ -11,10 +11,11 @@ export default defineConfig(async () => ({
   plugins: [react()],
   resolve: {
     alias: {
-      "@components": resolve(root, "components"),
-      "@pages": resolve(root, "pages"),
-      "@styles": resolve(root, "styles"),
-      "@public": resolve("public")
+      "@": root,
+      "components": resolve(root, "components"),
+      "pages": resolve(root, "pages"),
+      "styles": resolve(root, "styles"),
+      "public": resolve("public")
     }
   },
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
