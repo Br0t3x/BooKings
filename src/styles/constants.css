@@ -1,0 +1,40 @@
+:root {
+  --back: #FFF;
+  --softback: #EEE;
+  --border: #CCC;
+  --softborder: #DDD;
+  --color: #000;
+  --softcolor: #303038;
+}
+
+:root[data-theme=dark] {
+  --back: #202025;
+  --softback: #303035;
+  --border: #505055;
+  --softborder: #404045;
+  --color: #FFF;
+  --softcolor: #C0C0C8;
+}
+
+body {
+  background-color: var(--back);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #0000;
+  border: none;
+  box-sizing: border-box;
+  transition-property: width, height;
+  transition-duration: 150ms;
+}
+
+hr {
+  background-color: var(--border);
+  height: 1px;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}

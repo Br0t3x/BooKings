@@ -1,23 +1,18 @@
 import { invoke } from "@tauri-apps/api";
 import { useEffect, useState } from "react";
-import "./App.css";
-import { MainPage } from "pages/MainPage";
-import { LoginPage } from "pages/LoginPage";
+import MainPage from "@pages/MainPage";
+import LoginPage from "@pages/LoginPage";
 
 function App() {
-  const [isLogged, setIsLogged] = useState("");
+  const [isLogged, setIsLogged] = useState(false);
 
   useEffect(() => {
-    const getIsLogged = async () => {
-      setIsLogged(await invoke("is_logged"));
-    }
-
-    getIsLogged();
+    invoke("is_logged").then((value: unknown) => {
+      setIsLogged(value as boolean);
+    });
   });
 
-  return (
-    {isLogged ? <MainPage /> : <LoginPage />}
-  );
+  return (isLogged ? <MainPage /> : <LoginPage />);
 }
 
 export default App;
