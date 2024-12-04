@@ -1,0 +1,15 @@
+.button {
+  background-color: var(--softback);
+  padding: 1rem;
+  border-radius: 4px;
+  aspect-ratio: 1;
+  min-width: 100px;
+  width: 130px;
+  max-width: 200px;
+}
+
+.icon {
+  min-width: 50px;
+  width: 100%;
+  max-width: 90px;
+}

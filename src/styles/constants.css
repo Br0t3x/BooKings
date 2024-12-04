@@ -1,19 +1,25 @@
-:root {
+:root:not([dark-theme]) {
   --back: #FFF;
   --softback: #EEE;
   --border: #CCC;
   --softborder: #DDD;
+  --highlight: #00F;
   --color: #000;
   --softcolor: #303038;
+  --highlightedtext: var(--back);
+  --invert-rate: 100%;
 }
 
-:root[data-theme=dark] {
+:root[dark-theme] {
   --back: #202025;
   --softback: #303035;
   --border: #505055;
   --softborder: #404045;
+  --highlight: #00F;
   --color: #FFF;
   --softcolor: #C0C0C8;
+  --highlightedtext: var(--back);
+  --invert-rate: 0%;
 }
 
 body {
@@ -23,11 +29,13 @@ body {
 * {
   padding: 0;
   margin: 0;
+  color: var(--color);
   background-color: #0000;
   border: none;
   box-sizing: border-box;
   transition-property: width, height;
   transition-duration: 150ms;
+  font-family: 'Rubik';
 }
 
 hr {
@@ -36,5 +44,18 @@ hr {
 }
 
 input[type=submit] {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+.monocolor-icon {
+  filter: invert(var(--invert-rate));
+}
+
+button {
   cursor: pointer;
 }

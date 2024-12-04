@@ -47,6 +47,49 @@
 .submit {
   font-size: 1rem;
   color: var(--softcolor);
+  transition-property: background-color, color, border-radius, box-shadow;
+  transition-duration: 0.5s;
+  outline: none;
+}
+
+.submit:is(:hover, :focus) {
+  background-color: var(--highlight);
+  color: var(--highlightedtext);
+  border-radius: 0.5rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.options a {
+  box-sizing: content-box;
+  transition: padding 0.25s ease, color 0.25s ease;
+}
+
+.options a:is(:hover, :focus) {
+  color: var(--highlight);
+  outline: none;
+}
+
+.options :first-child:is(:focus, :hover) {
+  border-left-style: solid;
+  padding-left: 0.75rem;
+}
+
+.options :first-child {
+  border-left: 1px hidden var(--border);
+}
+
+.options :last-child {
+  text-align: right;
+  border-right: 1px hidden var(--border);
+}
+
+.options :last-child:is(:focus, :hover) {
+  border-right-style: solid;
+  padding-right: 0.75rem;
 }
 
 @media screen and (max-width: 800px) {

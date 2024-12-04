@@ -20,6 +20,7 @@
     "windows": [
       {
         "title": "BooKings",
+        "label": "main",
         "width": 800,
         "height": 600,
         "minWidth": 400,
@@ -32,6 +33,11 @@
       "csp": null
     },
     "bundle": {
+      "windows": {
+        "webviewInstallMode": {
+          "type": "offlineInstaller"
+        }
+      },
       "active": true,
       "targets": "all",
       "identifier": "com.bookings.app",

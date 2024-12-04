@@ -16,7 +16,10 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@img/*": ["./src/img/*"],
+      "@monocolor/*": ["./public/img/monocolor/*"],
+      "@contexts/*": ["./src/contexts/*"]
     },
 
     /* Linting */

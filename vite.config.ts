@@ -11,7 +11,10 @@ export default defineConfig(async () => ({
       "@": path.resolve(__dirname, "src"),
       "@components": path.resolve(__dirname, "src", "components"),
       "@pages": path.resolve(__dirname, "src", "pages"),
-      "@styles": path.resolve(__dirname, "src", "styles")
+      "@styles": path.resolve(__dirname, "src", "styles"),
+      "@img": path.resolve(__dirname, "src", "img"),
+      "@monocolor": path.resolve(__dirname, "public", "img", "monocolor"),
+      "@contexts": path.resolve(__dirname, "src", "contexts")
     }
   },
 

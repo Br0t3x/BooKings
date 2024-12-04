@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100px;
+  border-right: 1px solid var(--border);
+  height: 100vh;
+}
+
+.option,
+.settings {
+  width: 100%;
+  padding: 1rem 0 0.5rem;
+  cursor: pointer;
+}
+
+.option {
+  border-bottom: 1px solid var(--softborder);
+}
+
+.settings {
+  border-top: 1px solid var(--softborder);
+}
+
+.option img,
+.settings img {
+  display: block;
+  width: 60%;
+  margin: 0 auto 4px;
+}
+
+.option span,
+.settings span {
+  text-align: center;
+  display: block;
+  font-size: large;
+}
+
+.navbar>ul:has(>li:hover)>.option:not(:hover) {
+  background-color: transparent;
+}
+
+.option:hover,
+.option[data-focused],
+.settings:hover {
+  background-color: var(--softback);
+}
